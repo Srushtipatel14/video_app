@@ -1,9 +1,16 @@
 import "./App.css";
-import Header from "./components/header";
+import { Route, Routes } from "react-router-dom";
+import Section from "./components/section";
+import Body from "./components/body";
 
 function App() {
   return (
-    <Header/>
+    <Routes>
+      <Route to="/" element={<Body />}>
+        <Route to="" index element={<Section/>}/>
+      </Route>
+    </Routes>
+
   );
 }
 
